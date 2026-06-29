@@ -58,6 +58,51 @@ Algorithmic Trading Project | Team 05 | Portfolio for Week 2026-06-01
 
 ## How To Run
 
+### Classroom Demo From GitHub
+
+On a new classroom computer, clone the repository first. The commands below are
+the safest live-demo sequence because they start from an empty folder and use a
+fixed final submission date.
+
+```powershell
+cd "D:\Desktop\New_folder"
+git clone https://github.com/yilong-ie/algorithmic-trading-team05-group-project.git
+cd algorithmic-trading-team05-group-project
+```
+
+Then create the virtual environment and install dependencies:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+```
+
+If PowerShell blocks environment activation, run:
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\.venv\Scripts\Activate.ps1
+```
+
+Run the final live-submission example:
+
+```powershell
+python run_strategy.py --team-id Team05 --week-date 2026-06-26 --as-of 2026-06-27 --previous-weights 90,0,10,0
+```
+
+The generated CSV will be:
+
+```text
+submissions/Team05_2026-06-26.csv
+```
+
+Do not run `python run_strategy.py` without arguments during the live demo,
+because the default date may not match the professor's required Friday-date
+format.
+
+### Local Setup
+
 Create and activate a virtual environment, then install dependencies:
 
 ```powershell
